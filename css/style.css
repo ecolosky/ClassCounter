@@ -1,0 +1,121 @@
+/*To Do
+-remove css from bootstrap and pull it inot this file
+*/
+/*main container for ui, 1 below root div*/
+.bookmarklet.outer {
+    position: absolute;
+    z-index: 1000;
+    background-color: #EBEBEB;
+    width: 100%;
+      box-shadow: 5px 3px 30px 4px;
+
+}
+/*top header*/
+.bookmarklet.header {
+    z-index: 10001;
+    top: 0;
+    left: 0;
+    background: white;
+    margin-bottom: 10px;
+    display: block;
+  }
+/*ClassCounter Title*/
+  h2.bookmarklet.title {
+    color: #00709B;
+    font-size: 30px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+/*X button css - based on bootstrap.css*/
+a.bookmarklet.close{
+  float: right;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    color: orange;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .8;
+    background-color: white;
+    border-color: white;
+    box-shadow: none;
+    /* box-sizing: initial; */
+    margin-right: 10px;
+    min-height: 1em;
+    padding: 1px;
+    margin: 0;
+
+}
+a.bookmarklet.close:hover {
+    color: #C46300;
+    text-decoration: none;
+    cursor: pointer;
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+/*container for labels*/
+.bookmarklet.inner {
+  margin: 1px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #EBEBEB;
+  padding-top: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 30px;
+}
+/*each css class*/
+.bookmarklet.label {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    display: flex;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0em;
+    border-top-right-radius: .60em;
+    border-bottom-right-radius: .60em;
+    white-space: nowrap;
+}
+/*text inside label - displays css class name*/
+.bookmarklet.class.text {
+    align-self: center;
+    text-align: center;
+    font-family: monospace;
+    flex-grow: 1;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+/*different colors for each class(based on bootstrap.css layout)*/
+.bookmarklet.label-primary {
+    background-color: #0086B7;
+}
+.bookmarklet.label-primary.dark {
+    background-color: #007AA7;
+}
+.bookmarklet.label-warning {
+    background-color: #A25600;
+}
+.bookmarklet.label-warning.dark {
+    background-color: #854800;
+}
