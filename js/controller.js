@@ -72,5 +72,6 @@ app.controller('AController', function($scope, $attrs, $window) {
   // remove root div upon close button click
   $scope.close = function(){
     document.getElementById('bookmarklet root').remove();
+    angular.element($window).unbind('resize');
   };
 });
