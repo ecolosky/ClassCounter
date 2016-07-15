@@ -32,8 +32,6 @@ classes.sort(function(a,b){
 
 // init
 var model = [];//master array for controller
-var darkBlue = false;//used for alternating colors
-var darkYellow = false;//also yes
 
 // prepare data for controller
 for(index in classes){
@@ -48,28 +46,6 @@ for(index in classes){
   tempObj.name = classes[index];//attach name attribute
   tempObj.count = count;//attach count attribute
 
-  if((index/classes.length) < 0.15 || (index/classes.length) > 0.40 && (index/classes.length) < 0.75){
-    // set to blue
-    if(darkBlue){
-      tempObj.color = "label-primary dark"
-    }
-    else{
-      tempObj.color = "label-primary"
-    }
-    // switch
-    darkBlue = !darkBlue;
-  }
-  else{
-    // set to yellow
-    if(darkYellow){
-      tempObj.color = "label-warning dark"
-    }
-    else{
-      tempObj.color = "label-warning"
-    }
-    // switch
-    darkYellow = !darkYellow;
-  }
   // set size of text based on count
   // first normalize count vector
   var normalVal = (.2+(tempObj.count)/(maxCount)) * 50
