@@ -45,7 +45,7 @@ function setColors(model){
   return model;
 }
 
-app.controller('AController', function($scope, $attrs) {
+app.controller('AController', function($scope, $attrs, $window) {
   // pull data from local storage
   var dataModel = localStorage.getItem('_dataModel');
   if (!dataModel) throw new Error("no data was stored in local storage for the controller this is most likely a https page");
@@ -56,19 +56,20 @@ app.controller('AController', function($scope, $attrs) {
   // attach data model to the scope decorator
   $scope.view = dataModel;
   console.log("decorated the view with the data model");
+  // set origninal css classes upon doc ready
   angular.element(document).ready(function () {
     $scope.$apply(function(){
       dataModel = setColors(dataModel);
     });
   });
-
-  $(window).resize(function(){
+  // set new css classes upon window size change
+  angular.element($window).bind('resize', function () {
     newModel = setColors(dataModel);
     $scope.$apply(function(){
        $scope.view = newModel;
      });
   });
-
+  // remove root div upon close button click
   $scope.close = function(){
     document.getElementById('bookmarklet root').remove();
   };
