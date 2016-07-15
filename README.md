@@ -41,7 +41,7 @@ And that's it, now open the ```index.html``` and drag this link to your bookmark
 This application does use an **AngularJS** app and controller. I decided to use this framework for two reasons. One, it's ```$scope``` decorator makes it very easy to inject varying amounts of data into the HTML template. Two, Angular offers an easy to use set of event listeners which I needed to make the repainting of classes fully responsive. There is really only one drawback, if a page already has an Angular app attached then I cannot bootstrap mine.
 
 ### Design
-![Image of word-cloud-test](http://edcolosky.com/ClassCounter/word-cloud-test.png
+![Image of word-cloud-test](http://edcolosky.com/ClassCounter/word-cloud-test.png)
 I mostly followed the design that was provided to me. In respects to color scheme, name tag shape, and general layout. I purposefully did not follow the design in two ways. One, I set the margins between rows to be much smaller, this to me looked more like a word cloud and made the content flow better. Two, I went with a different font for the css names because the near courier new style looked more appealing.
 
 ### Assumptions About Design
