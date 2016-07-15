@@ -48,8 +48,6 @@ for(index in classes){
   tempObj.name = classes[index];//attach name attribute
   tempObj.count = count;//attach count attribute
 
-  // determine color of label
-  // alternate light/dark colors per class
   if((index/classes.length) < 0.15 || (index/classes.length) > 0.40 && (index/classes.length) < 0.75){
     // set to blue
     if(darkBlue){
@@ -72,7 +70,6 @@ for(index in classes){
     // switch
     darkYellow = !darkYellow;
   }
-
   // set size of text based on count
   // first normalize count vector
   var normalVal = (.2+(tempObj.count)/(maxCount)) * 50
